@@ -1,0 +1,536 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+/* Font Awesome */
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+
+
+/* Theme */
+:root {
+  --darkorange: #9b4638;
+  --orange: #D0604C;
+  --cream: #F2E0D2;
+  --tan: #c4ab98;
+  --darktan: #a18d7e;
+  --pink: #ab7b7b;
+  --lightblue: #4cd0a2;
+  --darkgreen: #4d633a;
+  --lightgreen: #719e49;
+  --mediumblue: #4c7ad0;
+  --indigo: #604cd0;
+  --gray-100: #151515;
+  --gray-900: #c4ae9db3;
+  --gray-800: #988f8f;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--gray-100);
+    color: var(--gray-900);
+}
+.borderless {
+    border: transparent;
+}
+/* Structure and Layout */
+
+/* Grid
+    grid-row-start / grid-column-start / grid-row-end / grid-column-end 
+*/
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 10px;
+    padding: 10px;
+    height: 100vh;
+    background-color: var(--gray-100);
+}
+
+.grid-container > div.item1, .grid-container > div.item11, .grid-container > div.item12 {
+    background-color: var(--gray-100);
+    color: var(--cream);
+    border: transparent;
+}
+
+.grid-container > div {
+    padding: 10px 15px;
+    /* From https://css.glass */
+    border-radius: 4px;
+    border: 1px solid var(--gray-900);
+
+}
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Header */
+.item1 {
+    grid-area: 1 / 1 / 2 / 9;
+}
+
+/* Nav */
+.item12 {
+    grid-area: 2 / 1 / 3 / 9;
+}
+
+/* Main - Left */
+.item2 {
+    grid-area: 3 / 1 / 5 / 2;
+}
+.item4 {
+    grid-area: 5 / 1 / 7 / 2;
+}
+.item10 {
+    grid-area: 5 / 2 / 7 / 4;
+}
+
+.item13 {
+    grid-area: 3 / 2 / 5 / 3;
+}
+
+/* Main - Right */
+.item3 {
+    grid-area: 5 / 5 / 7 / 9;
+}
+.item5 {
+    grid-area: 3 / 7 / 5 / 8;
+}
+.item6 {
+    grid-area: 3 / 8 / 4 / 9;
+}
+.item7 {
+    grid-area: 4 / 8 / 5 / 9;
+}
+/* Main - Middle */
+.item8 {
+    grid-area: 3 / 3 / 5 / 7;
+}
+.item9 {
+    grid-area: 5 / 4 / 7 / 5;
+}
+
+/* Mid Row */
+.item15 {
+    grid-area: 7 / 1 / 8 / 4;
+}
+.item17 {
+    grid-area: 7 / 4 / 8 / 6;
+}
+
+.item20 {
+    grid-area: 7 / 7 / 8 / 9;
+}
+.item21 {
+    grid-area: 7 / 5 / 8 / 7;
+
+}
+/* Below Row */
+.item16 {
+    grid-area: 8 / 1 / 11 / 2;
+}
+.item18 {
+    grid-area: 8 / 2 / 11 / 7;
+}
+.item19 {
+    grid-area: 8 / 7 / 11 / 9;
+}
+
+/* Footer */
+.item11 {
+      grid-area: 11 / 1 / 12 / 9;
+}
+
+
+
+/* Utilities */
+
+/* Typography */
+.display-1 {
+    font-weight: 800;
+    font-size: 5em;
+    text-transform: uppercase;
+}
+.display-2 {
+    font-weight: 800;
+    font-size: 4em;
+    text-transform: uppercase;
+}
+.display-3 {
+    font-weight: 800;
+    font-size: 3em;
+    text-transform: uppercase;
+}
+.display-4 {
+    font-weight: 800;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+.display-5 {
+    font-weight: 800;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+.display-6 {
+    font-weight: 800;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.mute {
+    color: var(--tan);
+}
+.small {
+    font-size: smaller;
+}
+.text-center {
+    text-align: center;
+}
+
+.text-upper {
+    text-transform: uppercase;
+}
+
+.monospace {
+    letter-spacing: 0.3em;
+}
+
+p {
+    color: var(--tan);
+    font-weight: 500;
+}
+
+.text-green {
+    color: var(--lightgreen);
+}
+
+.text-lightblue {
+    color: var(--lightblue);
+}
+
+
+.text-darkgreen {
+    color: var(--darkgreen);
+}
+
+.text-orange {
+    color: var(--orange);
+}
+
+.text-darkorange {
+    color: var(--darkorange);
+}
+
+.text-blue {
+    color: var(--mediumblue);
+}
+
+.text-indigo {
+    color: var(--indigo);
+}
+.text-cream {
+    color: var(--cream);
+}
+.text-tan {
+    color: var(--tan);
+}
+.text-darktan {
+    color: var(--darktan);
+}
+
+.text-pink {
+    color: var(--pink);
+}
+/* Forms, Fields, Labels, Inputs */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+label {
+    color: #c4ab98;
+}
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    border: 4px solid #c4ab98;
+    border-radius: 4px;
+    background-color: transparent;
+    width: 40%;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: medium;
+    color: var(--tan);
+}
+.open-button:hover {
+    border: 4px solid var(--tan);
+    border-radius: 4px;
+    background-color: var(--tan);
+    color: #151515;
+
+}
+button.btn.close {
+    background-color: transparent;
+    border-color: transparent;
+    text-align: center;
+    float: right;
+    margin: 15px;
+    color: #F2E0D2;
+  }
+
+  /* The popup form - hidden by default */
+  .form-popup {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    width: 95%;
+    max-width: 800px;
+    padding: 10px;
+    background-color: #151515;
+    border: 3px solid #c4ab98;
+    border-radius: 4px;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text], .form-container input[type=password], .form-container input[type=number], .form-container input[type=date] {
+    width: 80%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    border: 3px solid #c4ab98;
+    background-color: transparent;
+    color: #F2E0D2;
+  }
+  input::placeholder {
+    color: #F2E0D2;
+  }
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus, .form-container input[type=number]:focus, .form-container input[type=date]:focus {
+    color: #F2E0D2;
+    background-color:#151515b4;
+    outline: none;
+  }
+  /* Change Calendar Picker Icon Color */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(100%) sepia(28%) saturate(1527%) hue-rotate(300deg) brightness(89%) contrast(115%);
+  }
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom:10px;
+    text-transform: uppercase;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel,  .form-container .submit {
+    border: 2px solid #c4ab98;
+    color: var(--cream);
+    background-color: transparent;
+    border-radius: 5px;
+    width: 50%;
+    display: inline;
+  }
+
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+  
+.formTitle {
+    width: 100%;
+}
+
+/* Buttons */
+
+.btn-promo {
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: transparent;
+    width: 50%;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: medium;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+#colorServicesBtn {
+    border: 4px solid var(--darkorange);
+    background-color: transparent;
+    color: var(--darkorange);
+}
+#colorServicesBtn:hover {
+    background-color: var(--darkorange);
+    color: var(--cream);
+}
+
+#nailServicesBtn {
+    border: 4px solid #5a7e39;
+    background-color: transparent;
+    color: var(--darkgreen);
+    width: 40%;
+}
+#nailServicesBtn:hover {
+    background-color: var(--darkgreen);
+    color: var(--cream);
+}
+
+
+#makeupServicesBtn {
+    border: 4px solid #4167ac;
+    background-color: transparent;
+    color: #4167ac;
+    width: 40%;
+    margin: 10px;
+}
+#makeupServicesBtn:hover {
+    background-color: #4167ac;
+    color: var(--cream);
+}
+
+#makeupTutorialsBtn {
+    border: 4px solid #4167ac;
+    background-color: transparent;
+    color: #4167ac;
+    width: 40%;
+    margin: 10px;
+}
+#makeupTutorialsBtn:hover {
+    background-color: #4167ac;
+    color: var(--cream);
+}
+
+#allTutorialsBtn {
+    border: 4px solid #936666;
+    background-color: transparent;
+    color: #936666;
+}
+#allTutorialsBtn:hover {
+    background-color: #936666;
+    color: var(--cream);
+}
+
+
+#mailingListBtn {
+    border: 4px solid #604cd0;
+    background-color: transparent;
+    color: #604cd0;
+}
+#mailingListBtn:hover {
+    background-color:#604cd0;
+    color: var(--cream);
+}
+
+/* Lists, List Items, Navs */
+
+.social-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+ul.social-nav li, ul.navbar li {
+    display: inline;
+    margin: 1em;
+}
+ul.social-nav li a.social-link, ul.navbar li a.navlink {
+    color: var(--tan);
+    text-align: center;
+    padding: 10px 35px;
+    text-decoration: none;
+}
+ul.social-nav li a.social-link:hover, ul.navbar li a.navlink:hover {
+    color: var(--cream);
+}
+ul.social-nav li a.social-link i, ul.navbar li a.navlink i {
+    font-size: 24px;
+}
+  
+
+/* Background */
+
+.glass {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.6px);
+    -webkit-backdrop-filter: blur(5.6px);
+    border: 1px solid rgba(255, 255, 255, 0.37);
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-dark {
+    background-color: var(--gray-100);
+}
+
+/* Images */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+div > img {
+    align-self: center;
+    margin: 0 auto;
+}
+
+/* Spacing & Positioning */
+.vertical-center {
+    line-height: 150px;
+    height: 150px;
+}
+.mt-3 {
+    margin-top: 2em;
+}
+.mt-1 {
+    margin-top: 1em;
+}
+.pt-3 {
+    padding-top: 2em;
+}
+
+.mb-3 {
+    margin-bottom: 2em;
+}
+.mb-1 {
+    margin-bottom: 1em;
+}
+.pb-3 {
+    padding-bottom: 2em;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-top {
+    vertical-align: top;
+}
