@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Day Salon</title>
+    <link rel="icon" href="/assets/favicon.png">
+    <link href="../style/hairday.css" rel="stylesheet">
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Header -->
+        <div class="item1 text-center vertical-center">
+            <h1 class="display-1 monospace">H A I R  D A Y</h1>
+        </div>
+        <!-- Nav -->
+        <div class="item12">
+            <nav>
+                <ul class="navbar text-center text-upper">
+                    <li>
+                        <a class="navlink" href="/">Home</a>
+                    </li>
+                    <li>
+                        <a class="navlink" href="#">Services</a>
+                    </li>
+                    <li>
+                        <a class="navlink" href="#open-btn" onclick="openForm()">Book Online</a>
+                    </li>
+                    <li>
+                        <a class="navlink" href="#">Tutorials</a>
+                    </li>
+                    <li>
+                        <a class="navlink" href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Row - Left -->
+        <div class="item2 grid-item text-center">
+            <img class="borderless img-fluid float-left" id="imgMakeup" src="/assets/promo/makeup-services.png" alt="Make up Services Promo">
+            <h3 class="display-4 text-upper">Find Your Next <span class="text-blue">Look</span>
+            </h3>
+        </div>
+        <div class="item13 grid-item">
+            <button id="makeupServicesBtn" class="btn-promo mb-3">Makeup services</button>
+            <button id="makeupTutorialsBtn" class="btn-promo mb-3">Makeup tutorials</button>
+        </div>
+        <div class="item4 grid-item text-center">
+            <article>
+                <img class="borderless img-fluid" id="imgHairColor" src="/assets/promo/hairmodel-pink.png" alt="Hair Color Services Promo">
+            </article>
+        </div>
+        <div class="item10 grid-item text-center">
+            <article>
+                <h3 class="display-4"><span class="text-darkorange">Color</span> your world</h3>
+                <p>Fall Colors are back! Book a color appointment today.</p>
+                <br>
+                <button id="colorServicesBtn" class="btn-promo mb-3">color services</button>
+            </article>
+        </div>
+
+        <!-- Main Row - Right -->
+        <div class="item3 grid-item">
+            <img class="borderless img-fluid" id="imgHairProduct" src="/assets/promo/hair-products.png" alt="Hair Products Promo">
+        </div>
+        <div class="item5 grid-item">
+            <img class="borderless img-fluid" id="imgWomansHair" src="/assets/promo/hairmodel-air.png" alt="Womans Hair Services Promo">
+        </div>
+        <div class="item6 grid-item text-center">
+            <h3 class="display-4">Beauty is a state of <span class="text-pink">mind</span></h3>
+        </div>
+        <div class="item7 grid-item text-center">
+            <button id="allTutorialsBtn" class="btn-promo mt-1 mb-1">Tutorials</button>
+        </div> 
+        <div class="item9 grid-item">
+            <img class="borderless img-fluid" id="imgHairColor" src="/assets/promo/hairmodel-fall.png" alt="Hair Color Services Promo">
+        </div>
+
+        <!-- Main Row - Middle -->
+        <div class="item8 text-center text-upper">8
+            <h2 class="display-1"><span class="small">Time to</span> <br><span class="text-cream">Treat</span> <br><span class="small">yourself</span></h2>
+        </div> 
+
+        <!-- Mid Row -->
+        <div class="item15 grid-item">
+            <img class="borderless img-fluid" id="imgHairModelPurple" src="/assets/promo/hairmodel-purple.png" alt="Hair Services Promo">
+        </div>
+
+        <div id="form-grid" class="grid-item">
+        <div class="item17 text-center">
+                <h3 class="display-4 text-upper">Book your next <span class="text-cream">appointment</span></h3>
+            
+            <div class="form-popup" id="appointmentForm">
+                <form class="form-container">
+                    <div>
+                        <button type="button" class="btn close" onclick="closeForm()">&#10006;</button> <br>
+                    </div>
+                    <div class="pt-3 mt-3">
+                        <label for="name"><b>Full Name</b></label> <br>
+                        <input type="text" placeholder="Enter Your Full Name" name="name" required> <br>
+                    
+                        <label for="email"><b>Email</b></label> <br>
+                        <input type="text" placeholder="Enter Email" name="email" required> <br>
+
+                        <label for="phonenumber"><b>Phone Number</b></label> <br>
+                        <input type="number" placeholder="Enter Phone Number" name="phonenumber" required> <br>
+
+                        <label for="appointmentdate"><b>Appointment Details</b></label> <br>
+                        <input type="date" placeholder="Choose Date" name="appointmentdate" required> <br>
+                    
+                        <button type="submit" class="btn submit">Submit</button>
+                    </div>
+                  
+                </form>
+              </div>
+              <button id="open-btn" class="open-button mt-3 mb-3" onclick="openForm()">Book Online</button>
+        </div>
+    </div>
+        <div class="item21 grid-item">
+            <img class="borderless img-fluid" id="imgNailPolish" src="/assets/promo/nail-services.png" alt="Nail Polish & Nail Services Promo">
+        </div>
+        <div class="item20 grid-item text-center">
+            <article>
+                <h3 class="display-4 text-upper">Our <span class="text-darkgreen">best</span> collection yet</h3>
+                <button id="nailServicesBtn" class="btn-promo mb-3">nail services</button>
+            </article>
+        </div>
+
+        <!-- Below Row -->
+        <div class="item16 grid-item">
+            <img class="borderless img-fluid" id="imgMensHair" src="/assets/promo/hairmodel-m.png" alt="Mens Hair Services Promo">
+        </div>
+        <div class="item18 grid-item text-center">
+            <div>
+                <h3 class="display-3">
+                    Sign up for our <span class="text-indigo">mailing</span> list
+                </h3>
+                <button id="mailingListBtn" class="btn-promo mb-3">Sign up</button>
+            </div>
+
+        </div>
+        <div class="item19 grid-item">
+            <img class="borderless img-fluid" id="imgHairModelGreen" src="/assets/promo/hairmodel-green.png" alt="Hair Services Promo">
+        </div>
+
+        <!-- Footer -->
+        <div class="item11 text-center vertical-center">
+            <ul class="social-nav">
+                <li>
+                    <a class="social-link" href="facebook.com"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li><a class="social-link" href="instagram.com"><i class="fa fa-instagram"> </i></a></li>
+                <li><a class="social-link" href="twitter.com"><i class="fa fa-twitter"> </i></a></li>
+                <li><a class="social-link" href="linkedin.com"><i class="fa fa-linkedin-square"> </i></a></li>
+                <li><a class="social-link" href="tumblr.com"><i class="fa fa-tumblr"> </i></a></li>
+            </ul>
+        </div>
+
+      </div>
+
+
+
+      <script src="../js/app.js"></script>
+    
+</body>
+</html>
