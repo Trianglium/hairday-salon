@@ -14,18 +14,21 @@
   --pink: #ab7b7b;
   --lightblue: #4cd0a2;
   --darkgreen: #4d633a;
+  --mediumgreen: #6a8255;
   --lightgreen: #719e49;
   --mediumblue: #4c7ad0;
   --indigo: #604cd0;
   --gray-100: #151515;
   --gray-900: #c4ae9db3;
   --gray-800: #988f8f;
+  --gray-700: #b9a89cb3;
+  --gray-600: #c4ae9dcf;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--gray-100);
-    color: var(--gray-900);
+    color: var(--gray-600);
 }
 .borderless {
     border: transparent;
@@ -49,7 +52,11 @@ body {
     color: var(--cream);
     border: transparent;
 }
+/* Columns with images columns attached */
+.grid-container > div.item14, .grid-container > div.item33, .grid-container > div.item17, .grid-container > div.item18, .grid-container > div.item21, .grid-container > div.item20, .grid-container > div.item13, .grid-container > div.item15, .grid-container > div.item9, .grid-container > div.item31, .grid-container > div.item19, .grid-container > div.item25, .grid-container > div.item13, .grid-container > div.item4, .grid-container > div.item5, .grid-container > div.item6, .grid-container > div.item7, .grid-container > div.item16, .grid-container > div.item2, .grid-container > div.item3, .grid-container > div.item10, .grid-container > div.item24 {
+    border: transparent;
 
+}
 .grid-container > div {
     padding: 10px 15px;
     /* From https://css.glass */
@@ -87,38 +94,78 @@ body {
 .item10 {
     grid-area: 5 / 2 / 7 / 4;
 }
-
+.item23 {
+    grid-area: 5 / 1 / 7 / 4;
+}
 .item13 {
     grid-area: 3 / 2 / 5 / 3;
 }
-
+.item28 {
+    grid-area: 3 / 1 / 5 / 3;
+}
 /* Main - Right */
+
 .item3 {
-    grid-area: 5 / 5 / 7 / 9;
+    grid-area: 5 / 5 / 6 / 7;
+}
+.item25 {
+    grid-area: 6 / 5 / 7 / 7;
+}
+.item22 {
+    grid-area: 5 / 4 / 7 / 6;
+}
+
+.item24 {
+    grid-area: 5 / 6 / 7 / 8;
+}
+
+
+.item29 {
+    grid-area: 3 / 5 / 5 / 9;
 }
 .item5 {
-    grid-area: 3 / 7 / 5 / 8;
+    grid-area: 3 / 5 / 5 / 7;
 }
 .item6 {
-    grid-area: 3 / 8 / 4 / 9;
+    grid-area: 3 / 7 / 4 / 8;
 }
 .item7 {
-    grid-area: 4 / 8 / 5 / 9;
+    grid-area: 4 / 7 / 5 / 8;
 }
 /* Main - Middle */
 .item8 {
-    grid-area: 3 / 3 / 5 / 7;
+    grid-area: 3 / 3 / 5 / 5;
 }
 .item9 {
-    grid-area: 5 / 4 / 7 / 5;
+    grid-area: 5 / 7 / 7 / 8;
+}
+.item30 {
+    grid-area: 5 / 6 / 7 / 9;
+}
+.item31 {
+    grid-area: 5 / 6 / 7 / 8;
+}
+.item27 {
+    grid-area: 5 / 4 / 7 / 9;
 }
 
 /* Mid Row */
 .item15 {
-    grid-area: 7 / 1 / 8 / 4;
+    grid-area: 7 / 3 / 8 / 5;
+}
+.item18 {
+    grid-area: 8 / 3 / 11 / 5;
+}
+.item32 {
+    grid-area: 7 / 3 / 11 / 5;
+}
+
+
+.item14 {
+    grid-area: 7 / 1 / 8 / 3;
 }
 .item17 {
-    grid-area: 7 / 4 / 8 / 6;
+    grid-area: 7 / 1 / 8 / 3;
 }
 
 .item20 {
@@ -126,17 +173,27 @@ body {
 }
 .item21 {
     grid-area: 7 / 5 / 8 / 7;
-
+}
+.item26 {
+    grid-area: 7 / 5 / 8 / 9;
 }
 /* Below Row */
-.item16 {
-    grid-area: 8 / 1 / 11 / 2;
-}
-.item18 {
-    grid-area: 8 / 2 / 11 / 7;
-}
 .item19 {
+    grid-area: 8 / 1 / 11 / 3;
+}
+
+.item35 {
+    grid-area: 7 / 1 / 11 / 3;
+}
+
+.item33 {
     grid-area: 8 / 7 / 11 / 9;
+}
+.item34 {
+    grid-area: 8 / 5 / 11 / 9;
+}
+.item16 {
+    grid-area: 8 / 5 / 11 / 7;
 }
 
 /* Footer */
@@ -149,6 +206,11 @@ body {
 /* Utilities */
 
 /* Typography */
+.display-0 {
+    font-weight: 800;
+    font-size: 6em;
+    text-transform: uppercase;
+}
 .display-1 {
     font-weight: 800;
     font-size: 5em;
@@ -195,7 +257,7 @@ body {
 }
 
 .monospace {
-    letter-spacing: 0.3em;
+    letter-spacing: 0.35em;
 }
 
 p {
@@ -215,7 +277,9 @@ p {
 .text-darkgreen {
     color: var(--darkgreen);
 }
-
+.text-mediumgreen {
+    color: var(--mediumgreen);
+}
 .text-orange {
     color: var(--orange);
 }
@@ -397,14 +461,14 @@ button.btn.close {
 }
 
 
-#makeupServicesBtn {
+#makeupServicesBtn, #rewardsBtn {
     border: 4px solid #4167ac;
     background-color: transparent;
     color: #4167ac;
     width: 40%;
     margin: 10px;
 }
-#makeupServicesBtn:hover {
+#makeupServicesBtn:hover, #rewardsBtn:hover {
     background-color: #4167ac;
     color: var(--cream);
 }
@@ -413,7 +477,7 @@ button.btn.close {
     border: 4px solid #4167ac;
     background-color: transparent;
     color: #4167ac;
-    width: 40%;
+    width: 100%;
     margin: 10px;
 }
 #makeupTutorialsBtn:hover {
@@ -442,6 +506,29 @@ button.btn.close {
     color: var(--cream);
 }
 
+#hairProductShopBtn {
+    border: 4px solid #c4ab98;
+    border: 4px solid #c4ab98;
+    background-color: transparent;
+    color: var(--tan);
+}
+
+#hairProductShopBtn:hover {
+    background-color: #c4ab98;
+    color: #151515;
+}
+
+#joinTeamBtn {
+    border: 4px solid #936666;
+    background-color: transparent;
+    color: #936666;
+}
+
+#joinTeamBtn:hover {
+    background-color: #936666;
+    color: var(--cream);
+}
+
 /* Lists, List Items, Navs */
 
 .social-nav {
@@ -453,6 +540,16 @@ button.btn.close {
 ul.social-nav li, ul.navbar li {
     display: inline;
     margin: 1em;
+}
+
+ul.navbar li {
+    display: inline;
+    margin: 2em;
+
+}
+
+nav > div {
+    padding-right: 3em;
 }
 ul.social-nav li a.social-link, ul.navbar li a.navlink {
     color: var(--tan);
@@ -503,25 +600,152 @@ div > img {
     line-height: 150px;
     height: 150px;
 }
-.mt-3 {
-    margin-top: 2em;
+
+/* Padding & Margin */
+.pb-0 {
+    padding-bottom: 0em;
+}
+.p-0 {
+    padding: 0em;
+}
+.pt-1 {
+    padding-top: 1em;
+}
+.p-1 {
+    padding: 1em;
+}
+.pl-2 {
+    padding-left: 2em;
+}
+.p-2 {
+    padding: 2em;
+}
+.pr-3 {
+    padding-right: 3em;
+}
+.p-3 {
+    padding: 3em;
+}
+.mb-0 {
+    margin-bottom: 0em;
+}
+.m-0 {
+    margin: 0em;
 }
 .mt-1 {
     margin-top: 1em;
 }
-.pt-3 {
+.m-1 {
+    margin: 1em;
+}
+.ml-2 {
+    margin-left: 2em;
+}
+.m-2 {
+    margin: 2em;
+}
+.mr-3 {
+    margin-right: 3em;
+}
+.m-3 {
+    margin: 3em;
+}
+.px-0 {
+    padding-bottom: 0em;
+    padding-top: 0em;
+}
+
+
+.py-0 {
+    padding-left: 0em;
+    padding-right: 0em;
+}
+
+
+.px-1 {
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+
+.py-1 {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+
+.px-2 {
+    padding-bottom: 2em;
     padding-top: 2em;
 }
 
-.mb-3 {
-    margin-bottom: 2em;
+
+.py-2 {
+    padding-left: 2em;
+    padding-right: 2em;
 }
-.mb-1 {
+
+
+.px-3 {
+    padding-bottom: 3em;
+    padding-top: 3em;
+}
+
+
+.py-3 {
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+
+.mx-0 {
+    margin-bottom: 0em;
+    margin-top: 0em;
+}
+
+
+.my-0 {
+    margin-left: 0em;
+    margin-right: 0em;
+}
+
+
+.mx-1 {
     margin-bottom: 1em;
+    margin-top: 1em;
 }
-.pb-3 {
-    padding-bottom: 2em;
+
+
+.my-1 {
+    margin-left: 1em;
+    margin-right: 1em;
 }
+
+
+.mx-2 {
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+
+.my-2 {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+
+.mx-3 {
+    margin-bottom: 3em;
+    margin-top: 3em;
+}
+
+
+.my-3 {
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+
 
 .float-left {
     float: left;
