@@ -22,7 +22,7 @@ const WelcomeScreen = ({ navigation }) => {
               ? { color: '#000' }
               : { color: '#EDEFEE' },
           ]}>
-          Little Lemon, your local Mediterranean Bistro
+          Hair Day Salon
         </Text>
       </View>
       <Button
