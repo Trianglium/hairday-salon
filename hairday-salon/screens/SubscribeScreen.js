@@ -52,7 +52,7 @@ export default function SubscribeScreen() {
               ? { color: '#000' }
               : { color: '#EDEFEE' },
           ]}>
-            Subscribe to our newsletter for our latest delicious recipes!
+            Subscribe to our newsletter for our latest tutorials, promotions and more!
           </Text>
           <TextInput
             style={[
