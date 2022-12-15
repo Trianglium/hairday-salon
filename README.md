@@ -1,2 +1,2 @@
 # hairday-salon
-Hair Day Salon Website
+Cross platform site for Hair Day Salon
