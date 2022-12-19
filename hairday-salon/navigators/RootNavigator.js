@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import WelcomeScreen from "../screens/WelcomeScreen";
 import SubscribeScreen from "../screens/SubscribeScreen";
 import BookScreen from "../screens/BookScreen";
+import AppointmentConfirmationScreen from "../screens/AppointmentConfirmationScreen.js"
 
 const Stack = createNativeStackNavigator();
 
@@ -34,6 +35,16 @@ const RootNavigator = () => {
         component={BookScreen} 
         options={{ 
           title: 'Book', 
+          headerStyle: {
+            textAlign: 'center'
+        }
+        }}
+        />
+    <Stack.Screen
+        name="AppointmentConfirmation"
+        component={AppointmentConfirmationScreen}
+        options={{ 
+          title: 'AppointmentConfirmation', 
           headerStyle: {
             textAlign: 'center'
         }
